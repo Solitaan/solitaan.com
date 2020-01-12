@@ -4,16 +4,83 @@
   <head>
     <title>Turbo Kart Racers Statistics</title>
   </head>
-  <body><div align="center">
-    <br/><h1>Donate</h1>
-    <p>Consider supporting future development of TKRS:</p>
-    <style>.bmc-button img{width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#5F7FFF !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 22px !important;letter-spacing: 0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/Sol"><img src="images/banana.png" alt="Buy me a banana"><span style="margin-left:15px;font-size:28px !important;">Buy me a banana</span></a>
-    <br/>
-    <h1>Downloads</h1>
-    <br/><a href="download/TKRS-1.12.2-0.7.0.jar">TKRS 0.7.0 for Minecraft 1.12.2</a>
-    <br/>
-    <br/><a href="download/TKRS-1.8.9-0.7.0.jar">TKRS 0.7.0 for Minecraft 1.8.9</a>
-    <br/>
-    <br/><a href="https://www.instructables.com/id/How-to-Install-Mods-for-Minecraft-Forge/">Installation Instructions</a>
-    </div></body>
+  <body>
+    <div align="center">
+      <h1>Features</h1>
+      
+      <h2>Main Menu</h2>
+      <p>The main menu can be reached by clicking the button on most TKRS chat messages, or with the '/tkrs' command.</p>
+      <img src="main_menu.png">
+      
+      <h2>View Time Statistics</h2>
+      <p>You can view your best race, best laps, and average race/laps.</p>
+      <p>This menu is displayed when entering a TKR lobby, and can also be accessed with '/tkrs times'.</p>
+      <img src="time_stats_all.png">
+      <p>You can also filter the statistics to a particular time range, such as the last day:</p>
+      <img src="time_stats_day.png">
+      <p>The date that a best race or lap time was achived can be viewed by hovering over it:</p>
+      <img src="time_stats_hover.png">
+      <p>You can view your best race, best laps, and average race/laps:</p>
+      <img src="time_stats_all.png">
+      
+      <h2>View Item Statistics</h2>
+      <p>Item usage statistics, such as uses and hits, can also be viewed:</p>
+      <img src="item_stats_1.png">
+      <p>This includes green missile deflections and distances (page 2):</p>
+      <img src="item_stats_2.png">
+      
+      <h2>Information During Race</h2>
+      <p>Information is also showed live during a race, when you complete a lap or get a green missile hit:</p>
+      <p>The lap message shows two time comparisons:</p>
+      <ul>
+        <li>Difference between the lap # and your best race's lap #</li>
+        <li>Difference between your current pace and your best race's pace</li>
+      </ul>
+      <img src="lap_message.png">
+      <img src="missile_distance.png">
+      
+      <h2>Record and Play Back Races</h2>
+      <p>TKRS can also record your movements and actions during a race to be played back later!</p>
+      <p>Saved races can be viewed from the main menu. A save will be played back during a race if it is enabled,</p>
+      <p>which is done by selecting a kart type for at least one lap or the entire race.</p>
+      <p>If a kart type is selected for a particular lap of a race save, it will begin playback when you start that lap.</p>
+      <img src="saves_view.png">
+      <p>Karts for saves can be selected manually, but they can also be set automatically. Automatic options include:</p>
+      <ul>
+        <li>Best race (of all recorded saves)</li>
+        <li>Best Laps (of all recorded saves)</li>
+        <li>Average Race (closest race time to your statistical average)</li>
+        <li>Best Laps (closeest race time toyour statistical average)</li>
+      </ul>
+      <img src="playback_settings_manual.png">
+      <img src="playback_settings_auto.png">
+      <p>For both the manual and automatic mode, the kart type can be selected:</p>
+      <img src="kart_selection.png">
+      <p>Once TKRS records your first race, if you have it enabled, you'll be able to race your ghost!</p>
+      <img src="ghost_kart.png">
+      
+      <h2>Settings</h2>
+      <p>TKRS includes multiple useful settings:</p>
+      <img src="settings.png">
+      
+      <h2>Settings</h2>
+      <p>TKRS includes multiple useful settings:</p>
+      <img src="settings.png">
+      
+      <h2>File system</h2>
+      <p>A few details are useful to know about the TKRS file system.</p>
+      <p>Statistics can be transfered from one computer to another by copying the files in ./minecraft/mods/tkrs/stats from the source computer to the destination computer's ./minecraft/mods/tkrs/merge folder.</p>
+      <p>Saves can also be transfered, so you can race your friends' ghosts! Just put a ".race" file into the .minecraft/mods/tkrs/saves </p>
+      <p>Race saves are about 300kb on average, so consider storage space before saving 10000 of them!</p>
+      
+      <h1>Donate</h1>
+      <p>Consider supporting future development of TKRS:</p>
+      <style>.bmc-button img{width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#5F7FFF !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 22px !important;letter-spacing: 0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/Sol"><img src="images/banana.png" alt="Buy me a banana"><span style="margin-left:15px;font-size:28px !important;">Buy me a banana</span></a>
+      
+      <h1>Downloads</h1>
+      <br/><a href="download/TKRS-1.12.2-0.7.0.jar">TKRS 0.7.0 for Minecraft 1.12.2</a>
+      <br/><br/><a href="download/TKRS-1.8.9-0.7.0.jar">TKRS 0.7.0 for Minecraft 1.8.9</a>
+      <br/><br/><a href="https://www.instructables.com/id/How-to-Install-Mods-for-Minecraft-Forge/">Installation Instructions</a>
+    </div>
+  </body>
 </html>

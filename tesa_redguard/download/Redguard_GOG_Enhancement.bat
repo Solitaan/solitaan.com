@@ -9,7 +9,7 @@ powershell -Command "(New-Object Net.WebClient).DownloadFile('https://www.vogons
 powershell -Command Expand-Archive -Force DOSBox-G-1.zip DOSBox-G-1
 
 xcopy /s DOSBOX\* GOG_Enhancement.bak\DOSBOX\*
-xcopy /s dosbox_redguard.conf GOG_Enhancement.bak\dosbox_redguard.conf
+move dosbox_redguard.conf GOG_Enhancement.bak\dosbox_redguard.conf
 xcopy /s Redguard\SYSTEM.INI GOG_Enhancement.bak\Redguard\SYSTEM.INI*
 
 xcopy /s DOSBox-G-1\DOSBox\* DOSBOX /Y
@@ -36,5 +36,5 @@ powershell -Command "(gc DOSBOX\dgVoodoo.conf) -replace 'OnboardRAM             
 powershell -Command "(gc DOSBOX\dgVoodoo.conf) -replace 'Resolution                          = unforced', 'Resolution                          = 1024x768@60' | Out-File -encoding ASCII DOSBOX\dgVoodoo.conf"
 powershell -Command "(gc DOSBOX\dgVoodoo.conf) -replace 'ForceVerticalSync                   = true', 'ForceVerticalSync                   = false' | Out-File -encoding ASCII DOSBOX\dgVoodoo.conf"
 powershell -Command "(gc DOSBOX\dgVoodoo.conf) -replace 'ForceEmulatingTruePCIAccess         = false', 'ForceEmulatingTruePCIAccess         = true' | Out-File -encoding ASCII DOSBOX\dgVoodoo.conf"
-powershell -Command "(gc DOSBOX\dgVoodoo.conf) -replace '3DfxWatermark         = true', '3DfxWatermark         = false' | Out-File -encoding ASCII DOSBOX\dgVoodoo.conf"
+powershell -Command "(gc DOSBOX\dgVoodoo.conf) -replace '3DfxWatermark                       = true', '3DfxWatermark                       = false' | Out-File -encoding ASCII DOSBOX\dgVoodoo.conf"
 

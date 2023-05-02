@@ -1,4 +1,5 @@
-:: Script by Solitaan 2023. Original posters: OCD_Monkey, krashd, felekks: https://www.gog.com/forum/elder_scrolls_series/how_to_fix_redguard?pp=b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f
+:: Script by Solitaan May 1, 2023. Original posters: OCD_Monkey, krashd, felekks: https://www.gog.com/forum/elder_scrolls_series/how_to_fix_redguard?pp=b3f0c7f6bb763af1be91d9e74eabfeb199dc1f1f
+:: Execute from inside the top-level "Redguard" folder of your GOG installation. There should be a second "Redguard" folder inside this folder.
 
 if NOT "%cd:~-8%"=="Redguard" exit
 if NOT exist Redguard exit
@@ -25,7 +26,7 @@ powershell -Command "(gc dosbox_redguard.conf) -replace 'windowresolution=origin
 powershell -Command "(gc dosbox_redguard.conf) -replace 'vmemsize=2', 'vmemsize=8' | Out-File -encoding ASCII dosbox_redguard.conf"
 powershell -Command "(gc dosbox_redguard.conf) -replace 'memsize=31', 'memsize=63' | Out-File -encoding ASCII dosbox_redguard.conf"
 powershell -Command "(gc dosbox_redguard.conf) -replace 'aspect=false', 'aspect=true' | Out-File -encoding ASCII dosbox_redguard.conf"
-powershell -Command "(gc dosbox_redguard.conf) -replace 'cycles=auto', 'cycles=max' | Out-File -encoding ASCII dosbox_redguard.conf"
+powershell -Command "(gc dosbox_redguard.conf) -replace 'cycles=auto', 'cycles=150000' | Out-File -encoding ASCII dosbox_redguard.conf"
 powershell -Command "(gc dosbox_redguard.conf) -replace 'timed=true', 'timed=false' | Out-File -encoding ASCII dosbox_redguard.conf"
 powershell -Command "(gc dosbox_redguard.conf) -replace 'vmemsize=2', 'vmemsize=8' | Out-File -encoding ASCII dosbox_redguard.conf"
 powershell -Command "(gc dosbox_redguard.conf) -replace 'glide=emu', 'glide=true' | Out-File -encoding ASCII dosbox_redguard.conf"
@@ -38,3 +39,5 @@ powershell -Command "(gc DOSBOX\dgVoodoo.conf) -replace 'ForceVerticalSync      
 powershell -Command "(gc DOSBOX\dgVoodoo.conf) -replace 'ForceEmulatingTruePCIAccess         = false', 'ForceEmulatingTruePCIAccess         = true' | Out-File -encoding ASCII DOSBOX\dgVoodoo.conf"
 powershell -Command "(gc DOSBOX\dgVoodoo.conf) -replace '3DfxWatermark                       = true', '3DfxWatermark                       = false' | Out-File -encoding ASCII DOSBOX\dgVoodoo.conf"
 
+echo --------TESA: Redguard GOG installation has been updated--------
+timeout /t 5
